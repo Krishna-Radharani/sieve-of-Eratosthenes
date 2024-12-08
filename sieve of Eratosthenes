@@ -1,0 +1,21 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+int main(){
+    int a=20;
+    vector<int>prime(a+1,1);
+    for(int i=2;i<a;i++){
+        if(prime[i]==1){
+            for(int j=i*i;j<a;j=j+i){
+                //mark all the multiple of i as 0
+                prime[j]=0;
+            }
+        }
+    }
+    for(int k=2;k<a;k++){
+        if(prime[k]==1){
+            cout<<k<<endl;
+        }
+    }
+    return 0;
+}
