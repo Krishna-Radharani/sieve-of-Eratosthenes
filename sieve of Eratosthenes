@@ -5,9 +5,9 @@ int main(){
     int a=20;
     vector<int>prime(a+1,1); //one extra because starting from 0-a
   //ignoring 0 and 1 as they are of no use
-    for(int i=2;i<a;i++){
+    for(int i=2;i*i<=a;i++){
         if(prime[i]==1){
-            for(int j=i*i;j<a;j=j+i){
+            for(int j=i*i;j<=a;j=j+i){
                 //mark all the multiple of i as 0
                 prime[j]=0;
             }
